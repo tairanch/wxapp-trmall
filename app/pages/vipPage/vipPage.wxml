@@ -1,0 +1,140 @@
+<!--pages/vipPage/vipPage.wxml-->
+<wxs module="filters" src="../filter.wxs"></wxs>
+<view class="vip-page">
+    <view class="vip-page-topbg">
+        <image class="{{ (!is_vip || (is_vip && !vipApiInviter))? 'vip-page-longbg' : '' }}" src="https://image.tairanmall.com/97128d96a1a4b8ba1f765bf30134f5295d64eee64c415"></image>
+    </view>
+    <view class="vip-page-top">
+        <view class="vip-page-top-relative">
+            <view class="vip-user-info-box">
+                <view class="vip-user-info-header">
+                    <image class="vip-user-info-header-image" src="{{userAvatar}}"></image>
+                    <image class="vip-header-logo" src="/image/vipPage/vip-head.png" wx:if="{{is_vip}}"></image>
+                </view>
+
+                <view class="vip-user-info-content">
+                    <view class="user-info">
+                        <view class="user-name">{{userName}}</view>
+                        <view class="user-tag {{is_vip? 'user-vip-tag':''}}">
+                        </view>
+                    </view>
+                    <view class="vip-info-text" wx:if="{{is_vip}}">{{member_level_end_time}} 会员到期</view>
+                </view>
+            </view>
+            <view class="vip-top-card-box">
+                <view class="vip-top-card">
+                    <view class="vip-card-title">
+                        泰享品质好生活
+                    </view>
+                    <view wx:if="{{is_vip}}" class="vip-card-text">您已开通泰享会员，享5大特权 <view class="vip-remaining">剩{{remain_days}}天</view></view>
+                    <view wx:else class="vip-card-text">开通泰享会员，享5大特权，仅需288元/年</view>
+                </view>
+            </view>
+            <view wx:if="{{!is_vip || !vipApiInviter}}">
+                <view wx:if="{{!is_vip }}">
+                    <view wx:if="{{inviter}}" class="vip-inviter-info">
+                        <view>您的好友{{inviter}}邀请您开通泰享会员</view>
+                    </view>
+                    <view wx:else class="vip-inviter-info">
+                        <view>欢迎开通泰享会员，请完善好友邀请码</view>
+                        <image src="/image/vipPage/show-inviter.png" class="show-inviter" bindtap="openInviterPopup">去填写</image>
+                    </view>
+                </view>
+                <view wx:else>
+                    <view class="vip-inviter-info">
+                        <view>欢迎开通泰享会员，请完善好友邀请码</view>
+                        <image src="/image/vipPage/show-inviter.png" class="show-inviter" bindtap="openInviterPopup">去填写</image>
+                    </view>
+                </view>
+            </view>
+            <view class="vip-top-text">
+                开通泰享会员 <image src="/image/vipPage/v.png" class="vip-v-image"></image>享5大特权
+            </view>
+            <view class="vip-rights-tab-box">
+                <view wx:for="{{tabList}}" class="vip-rights-tab" bindtap="tapTab" data-index="{{item.index}}" wx:key='{{index}}'>
+                    <view class="{{tabIndex == item.index ? 'vip-tab-icon active': 'vip-tab-icon'}}">
+                        <image src="{{item.icon}}"></image>
+                    </view>
+                    <text class="vip-tab-text">{{item.name}}</text>
+                </view>
+            </view>
+            <view class="vip-rights-content-box">
+                <view class="{{'vip-rights-content vip-rights-content_' + tabIndex}}">
+                    <view class="rights-content-title">{{contentList[tabIndex-1].title}}</view>
+                    <view class="use-btn" wx:if="{{tabIndex == 1 && is_vip}}" bindtap="turnCard">
+                        立即使用
+                    </view>
+                    <view class="title-border"></view>
+                    <view class="vip-rights-texts">
+                        <view wx:for="{{contentList[tabIndex-1].texts}}" wx:key='{{index}}' wx:for-item="text" class="vip-rights-text-view">
+                            <text class="vip-rights-text">{{text}}</text>
+                        </view>
+                        <view class="turn-activity-btn" wx:if="{{tabIndex == 4}}" bindtap="turnActivity">
+                            查看精品活动
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="vip-activity" bindtap="turnActivity"></view>
+    <view class="vip-goods" wx:if="{{recommendList && recommendList.length > 0}}">
+        <view class="vip-goods-title">
+            <image class="title-line" src="/image/vipPage/line1.jpg"></image>
+            <text>泰享会员优选商品</text>
+            <image class="title-line" src="/image/vipPage/line2.jpg"></image>
+        </view>
+        <view class='goods-swipe-wrapper'>
+            <scroll-view
+                    scroll-left='{{recommendScrollLeft}}'
+                    scroll-x
+                    scroll-with-animation
+            >
+                <view class='swipe-box'>
+                    <view class='swipe-content' style='{{"width: " + (134*recommendList.length+6)*2 + "rpx;" }}'>
+                        <view wx:for='{{recommendList}}' wx:key='id' bindtap='goodstail' data-itemid='{{item.id}}' class='item'>
+                            <view wx:if="{{item.more}}" class="more-box" bindtap="searchMore">
+                                <image class="more-img" src="/image/vipPage/vipcard.png"></image>
+                                <view class="more-text">查看更多</view>
+                            </view>
+                            <view wx:else>
+                                <image class='img' src='{{item.primary_image ? filters.addImageSuffix( "https://image.tairanmall.com" + item.primary_image, "_m"): "/image/icon/loading/default-no-item.png"}}'></image>
+                                <view class='title'>{{item.title}}</view>
+                                <view class='price'>
+                                    ¥ {{filters.toFixedTwo((item.price.active) ? item.price.active : item.price.default)}}
+                                </view>
+                                <text class="discount">会员9折</text>
+                                <view class="good-top-tag" wx:if="{{item.activity_image}}">
+                                    <image src='{{item.activity_image}}' class="activity-image" mode="widthFix"/>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+    <view class="agreement-box" wx:if="{{!is_vip}}">
+        <view class="agreement-icon-tap" bindtap="setAgreement">
+            <view class="not-agreement-icon agreement-icon" wx:if="{{!isagreement}}"></view>
+            <image class="agreement-icon" src="/image/vipPage/agreement.png" wx:else></image>
+        </view>
+        <text class="agreement-text1" bindtap="setAgreement">已阅读并同意</text>
+        <text class="agreement-text2" bindtap="turnAgreement">《泰享会员(付费)服务协议》</text>
+    </view>
+    <view bindtap="openVip" class="open-btn" wx:if="{{!is_vip}}">
+        <text>立即开通 ¥288/年</text>
+    </view>
+    <mask-popup wx:if="{{showInviterPopup}}">
+        <view class="inviter-info-popup">
+            <view class="inviter-popup-box">
+                <view class="inviter-popup-title">完善邀请人信息</view>
+                <view class="inviter-popup-code">
+                    <input type='number' placeholder="请输入邀请码" bindinput="inputCode"/>
+                </view>
+                <view class="inviter-popup-btn" bindtap="sureCode">确定</view>
+            </view>
+            <image class="inviter-popup-close" src="/image/icon/close/close-l-x-icon.png" bindtap="closeInviterPopup"></image>
+        </view>
+    </mask-popup>
+</view>

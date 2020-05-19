@@ -1,0 +1,4 @@
+泰然城小程序上线前检查项：
+
+1.【重要】AppConfig.js 里 message_serveId改为线上环境id
+

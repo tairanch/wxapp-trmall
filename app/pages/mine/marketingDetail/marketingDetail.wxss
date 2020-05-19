@@ -1,0 +1,183 @@
+page{
+  background-color: #F4F4F4;
+}
+.marketing-detail{
+  width: 100%;
+  height: 100%;
+  background-color: #F4F4F4;
+}
+
+.marketing-detail-title{
+  /* background-color: #2A2A2A; */
+  background: linear-gradient(270deg,rgba(42,42,42,1) 0%,rgba(75,75,75,1) 100%);
+  height: 240rpx;
+  position: relative;
+}
+
+.marketing-detail-type-content{
+  position: relative;
+  top: 46rpx;
+  left: 40rpx;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  width: calc(100% - 40rpx);
+}
+
+.marketing-detail-type-img{
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.marketing-detail-type{
+  color: #FFCF92;
+  font-size: 36rpx;
+  font-weight: 600;
+  margin-left:14rpx;
+}
+
+.marketing-detail-type-white{
+  color: #f4f4f4;
+}
+
+/* 总写样式 */
+
+.marketing-detail-info,.marketing-detail-space,.marketing-detail-backcard,.marketing-detail-card,.marketing-detail-bottom{
+  margin: 0 20rpx 20rpx 20rpx;
+  width:calc( 100% - 100rpx);
+  background-color:#fff;
+  border-radius:10rpx;
+  padding:30rpx;
+}
+
+.marketing-detail-space{
+  width: 100%;
+  height: 162rpx;
+  background-color: #f4f4f4;
+  margin:0;
+  padding:0;
+}
+
+/* 商品信息 */
+
+.marketing-detail-info{
+  position: absolute;
+  top: 142rpx;
+  display: flex;
+  flex-direction: row;
+  height: 180rpx;
+  align-items:center;
+}
+
+.marketing-detail-image{
+  width: 180rpx;
+  height: 180rpx;
+  background-color: #f4f4f4;
+}
+
+.marketing-detail-images{
+  width: 100%;
+  height: 100%;
+}
+
+.marketing-detail-world{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  justify-content:space-between;
+  width:calc(100% - 180rpx);
+  padding:0 0 0 20rpx;
+}
+
+.marketing-detail-world-spacetwo{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient: vertical;
+}
+
+.marketing-detail-world-space{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #353535;
+}
+
+.marketing-detail-world-space span{
+  color: #353535;
+}
+.marketing-detail-world-space span:nth-child(2){
+  color: #999;
+}
+
+.marketing-detail-backitem{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #666;
+  font-size: 24rpx;
+  margin-bottom: 30rpx;
+  align-items:center;
+}
+
+.marketing-detail-backitem-speckey{
+  color: #353535;
+  font-size: 26rpx;
+  font-weight: 600;
+  display:flex;
+}
+
+.marketing-detail-backitem:last-child{
+  margin-bottom: 0;
+}
+
+.marketing-detail-backitem-redvalue{
+  font-weight: 600;
+  font-size: 34rpx;
+  color:rgba(230,10,48,1);
+}
+
+.marketing-detail-backitem-has-manual{
+  color: #666;
+  font-weight: 400;
+  margin-left:10rpx
+}
+
+/* 订单编号 时间 */
+.marketing-detail-card-item{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  margin-bottom:30rpx;  
+}
+
+.marketing-detail-card-item:nth-child(5){
+  margin-bottom: 0;
+}
+
+.marketing-detail-card-item span{
+  font-size:24rpx;
+  color:#666;
+}
+
+/* 底部文字展示 */
+.marketing-detail-bottom{
+  display: flex;
+  flex-direction: column;
+  border-radius: 0;
+  background-color: #f4f4f4;
+  color: #999;
+  font-size: 24rpx;
+}
+
+.marketing-detail-bottom-title{
+  color: #666;
+  font-size: 26rpx;
+}
+
+.marketing-detail-copy-img{
+  height:40rpx;
+  width:36rpx;
+  margin-left:14rpx;
+}

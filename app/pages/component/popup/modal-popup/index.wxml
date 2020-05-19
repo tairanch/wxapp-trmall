@@ -1,0 +1,13 @@
+<view>
+    <view class="modal-popup {{modalClass}}">
+        <slot></slot>
+        <view wx:if="{{useFooter}}">
+            <slot name="footer"></slot>
+        </view>
+        <view class="modal-btns {{footerClass}}" wx:else>
+            <view wx:for="{{btns}}" wx:key="text" class="{{item.className}}" bindtap="triggerBtns" data-index="{{index}}">
+                <text>{{item.text}}</text>
+            </view>
+        </view>
+    </view>
+</view>

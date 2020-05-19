@@ -1,0 +1,146 @@
+/* pages/product/pieceSale/pieceSale.wxss */
+
+.nav {
+  height: 80rpx;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 76rpx;
+  background: white;
+  font-size: 28rpx;
+  white-space: nowrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.nav-item {
+  /* width: 20%; */
+  width: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  color: #353535;
+}
+
+.nav-item.active {
+  color: #e90028;
+  border-bottom-color: #e9062d;
+  border-bottom-width: 5rpx;
+  border-bottom-style: solid;
+}
+
+.tab-box {
+  background: #f4f4f4;
+  padding-top: 80rpx;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.tab-content {
+  overflow-y: scroll;
+}
+
+/* 信息展示 */
+
+
+/* 无数据展示 */
+.myclients-body-nodataworld{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 11pt;
+  color: #999999;
+  line-height:70vh;
+}
+
+/* 有数据 */
+.myclients-body{
+  margin: 30rpx;
+  padding: 20rpx 40rpx;
+  border-radius:10px;
+  background-color: #fff;
+}
+
+.myclients-content{
+  display: flex;
+  flex-direction: row;
+  height: 180rpx;
+  border-bottom: 1px solid #E4E4E4;
+}
+
+.myclients-content:last-child{
+  border-bottom: transparent;
+}
+
+.myclients-left{
+  width: 108rpx;
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+
+}
+
+.myclients-photo{
+  width: 78rpx;
+  height: 78rpx;
+  margin-top:28rpx;
+  border-radius:38rpx;
+}
+
+.myclients-right{
+  width: calc(100% - 108rpx);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.myclients-right-top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.myclients-right-name{
+  font-size:30rpx;
+  font-weight:400;
+  color:#353535;
+}
+
+.has-namecard{
+  width:120rpx;
+  color:#B96C21;
+  background-color:#EEDFCC;
+  font-size:24rpx;
+  border-radius:30rpx;
+  text-align:center;
+  height:34rpx;  
+}
+
+.myclients-right-info{
+  font-size:24rpx;
+  font-weight:400;
+  color:#353535;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin:10rpx 0;
+}
+
+.myclients-right-info-money{
+  margin-left: 40rpx;
+}
+
+.myclients-right-info-money-red{
+  color:#e9062d;
+  margin-left: 20rpx;
+}
+
+.myclients-right-time{
+  font-size:24rpx;
+  font-weight:400;
+  color:#999;
+}
+
+

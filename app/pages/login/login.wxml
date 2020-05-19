@@ -1,0 +1,55 @@
+<view class='page'>
+
+  <view class="userinfo">
+    <view class='content'>
+      <!--手机号码  -->
+      <view class='section'>
+        <image class='left' src='../../image/icon/phone-shape-icon.png'></image>
+        <input class='input-grid' 
+                placeholder='请输入手机号码' 
+                type='number' 
+                placeholder-class='placeholder_class' 
+                value='{{phone}}' 
+                bindinput="getPhone"></input>
+        <view bindtap='clearPhone'>
+          <image class='cancel' src='../../image/icon/close-x-icon.png'></image>
+        </view>
+      </view>
+      <!--验证码  -->
+      <view class='section' wx:if="{{!loadCaptcha}}">
+        <image class='left' src='../../image/icon/key-shape-icon.png'></image>
+        <input class='input-grid-mes' 
+              placeholder='短信验证码' 
+              placeholder-class='placeholder_class' 
+              type='number' 
+              bindinput='getMobileCode'></input>
+        <text class='{{canGetIdentify?"get":"get_not"}}' 
+              bindtap='sendMobileCode'>{{getText}}</text>
+      </view>
+      <captcha id="captcha" 
+                class='input-grid-slide' 
+                wx:else gt="{{gt}}" 
+                challenge="{{challenge}}" 
+                offline="{{offline}}" 
+                bindonSuccess="captchaSuccess" 
+                bindonReady="captchaReady" 
+                bindonClose="captchaClose" 
+                bindonError="captchaError" 
+                styleConfig="{{styleConfig}}"
+      />
+      <button wx:if="{{!hasAuth}}"
+              open-type="getUserInfo"
+              bindgetuserinfo="getUserInfo"
+              class='land_button'
+      > 登录 </button>
+      <button wx:else
+              class='land_button'
+              bindtap='getCode'
+       > 登录 </button>
+
+      <view class="not-login-box">
+        <text class="not-login-btn" bindtap="notLogin">暂不登录</text>
+      </view>
+    </view>
+  </view>
+</view>

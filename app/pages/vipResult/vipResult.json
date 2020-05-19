@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "birthdate-picker": "../component/datePicker/birthWelfarePicker/index",
+    "mask-popup": "../component/popup/mask-popup/index"
+  }
+}

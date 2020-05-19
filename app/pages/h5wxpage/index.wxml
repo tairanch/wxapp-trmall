@@ -1,0 +1,2 @@
+<!--h5链接页面-->
+<web-view src="{{web_src}}"></web-view>

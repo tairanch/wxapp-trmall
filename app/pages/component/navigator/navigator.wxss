@@ -1,0 +1,40 @@
+.navigation{
+    display: block;
+    height: 98rpx;
+    width: 100%;
+}
+.navigation .navigator{
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    left: 0;
+    bottom: 0;
+    height: 98rpx;
+    border-top: 2rpx solid #e4e4e4;
+    background: #fff;
+    width: 100%;
+    font-size: 22rpx;
+    text-align: center;
+}
+
+.navigation .navLink{
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.navigation .navLink .navText{
+    flex-shrink: 1;
+    height: 32rpx;
+    line-height: 32rpx;
+    overflow: hidden;
+}
+.navigation .navLink .icon{
+    flex-shrink: 0;
+    height: 54rpx;
+    width: 54rpx;
+}

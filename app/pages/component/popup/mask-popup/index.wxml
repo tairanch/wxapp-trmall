@@ -1,0 +1,7 @@
+<!--pages/component/mask-popup/index.wxml-->
+<view class="mask-box">
+    <view class="mask" style="{{maskStyle}}"></view>
+    <view class="mask-content">
+        <slot></slot>
+    </view>
+</view>

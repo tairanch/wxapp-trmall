@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "detail-header": "./components/detail-header"
+  },
+  "navigationBarTitleText": "推广佣金"
+}

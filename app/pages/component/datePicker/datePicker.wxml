@@ -1,0 +1,41 @@
+<view class="date-picker-content-center {{pickerClass}}">
+    <picker-view class="date-picker-content-item {{pickerItemClass}}"
+                 style="{{pickerItemStyle}}"
+                 indicator-style="{{indicatorStyle}}"
+                 indicator-class="{{indicatorClass}}"
+                 value="{{tempYearPos}}"
+                 bindchange="year_onChange">
+        <picker-view-column>
+            <view wx:for="{{years}}" wx:key="*this"
+                  style="{{(item - 1900) == tempYearPos[0] ? selectedStyle: viewStyle}}"
+                  class="{{yearsClass}} {{index == tempYearPos[0] ? selectedClass: viewClass}}"
+            >{{item}}年</view>
+        </picker-view-column>
+    </picker-view>
+    <picker-view class="date-picker-content-item {{pickerItemClass}}"
+                 style="{{pickerItemStyle}}"
+                 indicator-style="{{indicatorStyle}}"
+                 indicator-class="{{indicatorClass}}"
+                 value="{{tempMonthPos}}"
+                 bindchange="month_onChange">
+        <picker-view-column>
+            <view wx:for="{{months}}" wx:key="*this"
+                  style="{{index == tempMonthPos[0] ? selectedStyle: viewStyle}}"
+                  class="{{monthsClass}} {{index == tempMonthPos[0] ? selectedClass: viewClass}}"
+            >{{item}}月</view>
+        </picker-view-column>
+    </picker-view>
+    <picker-view class="date-picker-content-item {{pickerItemClass}}"
+                 style="{{pickerItemStyle}}"
+                 indicator-style="{{indicatorStyle}}"
+                 indicator-class="{{indicatorClass}}"
+                 value="{{tempDayPos}}"
+                 bindchange="day_onChange">
+        <picker-view-column>
+            <view  wx:for="{{days}}" wx:key="*this"
+                   style="{{index == tempDayPos[0] ? selectedStyle: viewStyle}}"
+                   class="{{daysClass}} {{index == tempDayPos[0] ? selectedClass: viewClass}}"
+            >{{item}}日</view>
+        </picker-view-column>
+    </picker-view>
+</view>

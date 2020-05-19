@@ -1,0 +1,18 @@
+<!--pages/component/navigator/navigator.wxml-->
+<view class="navigation">
+    <view class="navigator">
+        <view
+           class="{{idx === activeIdx ? 'navLink active': 'navLink'}}"
+           wx:for="{{navigatorList}}"
+           wx:key="id"
+           wx:for-index="idx"
+           bindtap="turnTab"
+           data-linkval="{{item.link_val}}"
+           data-linktype="{{item.link_type}}"
+           data-tabindex="{{idx}}"
+        >
+            <image class='icon' src="{{ idx === activeIdx ? item.selected_icon: item.icon}}"></image>
+            <view class="navText" style='{{ "color:" + (idx === activeIdx ? item.selected_text_color: item.text_color) + ";"}}'>{{item.title}}</view>
+        </view>
+    </view>
+</view>

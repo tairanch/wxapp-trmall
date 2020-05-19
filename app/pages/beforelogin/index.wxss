@@ -1,0 +1,36 @@
+/**index.wxss**/
+.getuserinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:100%;
+}
+
+.tairan-img {
+  width: 160rpx;
+  height: 160rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.content-world {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  font-size:12pt;
+}
+
+.small-world{
+  margin-top: 10rpx;
+  color: #666;
+}
+
+.content-btn {
+  margin-top: 50px;
+  width: 100%;
+}
+
+.land_button{
+  width: 90%;
+  
+}

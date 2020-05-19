@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "泰享会员",
+  "usingComponents": {
+    "mask-popup": "../component/popup/mask-popup/index"
+  }
+}

@@ -1,0 +1,27 @@
+<view class="container">
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+  <view class='getuserinfo' wx:if="{{showhasgetinfo}}">
+    <view class='content-img'>
+      <image class="tairan-img" src="{{tarranimg}}" mode="cover"></image>
+    </view>
+    <view class='content-world'>
+      <text class='blod-world'>泰然城申请获得以下权限：</text>
+      <text class='small-world'>获得你的公开信息(昵称，头像等)</text>
+    </view>
+     <view class='content-btn'>
+        <button open-type="getUserInfo" 
+                bindgetuserinfo="getUserInfo" 
+                type="primary"
+                class='land_button'> 确认授权 </button>
+     </view>
+  </view>
+</view>

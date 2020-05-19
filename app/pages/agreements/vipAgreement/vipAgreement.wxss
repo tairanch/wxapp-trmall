@@ -1,0 +1,28 @@
+.vip-agreement-page {
+    padding: 10px;
+    background:#fff;
+
+}
+.vip-agreement-page view {
+    line-height: 22px;
+    background: rgb(255, 255, 255);
+    text-indent: 2em;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+.vip-agreement-page text {
+    font-size: 14px;
+    font-family: 微软雅黑, "Microsoft YaHei";
+}
+.vip-agreement-page .title {
+    text-align: center;
+    text-indent: 0em;
+}
+
+.vip-agreement-page .title  text {
+    font-weight: bold;
+    font-size: 16px;
+}
+.vip-agreement-page .tileft {
+    text-indent: 0em;
+}

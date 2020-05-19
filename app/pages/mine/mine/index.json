@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "个人中心",
+  "usingComponents": {
+    "navigator-bar": "../../component/navigator/navigator"
+  },
+  "enablePullDownRefresh": true
+}

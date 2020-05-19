@@ -1,0 +1,19 @@
+<!--pages/mine/commissionExplain/commissionExplain.wxml-->
+<view class="commissionExplain_page">
+    <view class="text-bg-view">
+        <text class="title-text">· 佣金</text>
+        <text class="desc-text">
+            列表中佣金为入账佣金。当商品存在退款时，入账佣金将会通过预估佣金减去佣金扣除后重新计算。取消入账状态下的佣金不会结算到余额账户。
+        </text>
+    </view>
+    <view class="text-bg-view">
+        <text class="title-text">· 佣金扣除</text>
+        <text class="desc-text">
+            当订单发生退款时，佣金订单详情页会记录退款金额及对应佣金扣除。
+            1.申请全部金额退款时，佣金扣除=预估佣金。
+            2.申请部分金额退款时，佣金扣除会按照退款的金额计算。
+        </text>
+
+    </view>
+
+</view>

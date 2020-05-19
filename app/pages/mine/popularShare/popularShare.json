@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "热门分享",
+  "usingComponents": {
+    "search-component": "/pages/component/searchCom/searchCom",
+    "banner-component":"/pages/component/bannerCom/bannerCom",
+    "advertising-component": "/pages/component/advertisingCom/advertisingCom",
+    "group-component": "/pages/component/groupCom/groupCom",
+    "two-lines-component": "/pages/component/twoLinesCom/twoLinesCom",
+    "three-lines-component": "/pages/component/threeLinesCom/threeLinesCom",
+    "loading": "/pages/component/loading/loading"
+  }
+}

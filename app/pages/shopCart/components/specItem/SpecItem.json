@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "swiper-ctrl": "../../../component/swiperCtrlWidgetCom/swiperCtrlWidget"
+  }
+}

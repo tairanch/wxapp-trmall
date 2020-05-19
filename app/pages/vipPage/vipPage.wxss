@@ -1,0 +1,544 @@
+view {
+    box-sizing: border-box;
+}
+image {
+    box-sizing: border-box;
+}
+text {
+    box-sizing: border-box;
+}
+
+.vip-page {
+    min-height: 100vh;
+    position: relative;
+}
+
+.vip-page-topbg {
+    width: 100%;
+}
+
+.vip-page-topbg image {
+    height: 1100rpx;
+    width: 100%;
+}
+.vip-page-topbg .vip-page-longbg{
+    height: 1200rpx;
+}
+.vip-page-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 930rpx;
+}
+
+.vip-page-top .vip-page-top-relative {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+/** 个人信息 **/
+.vip-user-info-box {
+    padding-top: 52rpx;
+    padding-left: 30rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.vip-user-info-box .vip-user-info-header {
+    position: relative;
+    flex-shrink: 0;
+    width: 80rpx;
+    height: 80rpx;
+}
+.vip-user-info-box .vip-user-info-header .vip-user-info-header-image {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+.vip-user-info-box .vip-user-info-header .vip-header-logo {
+    position: absolute;
+    bottom: 60rpx;
+    left: 50rpx;
+    width: 40rpx;
+    height: 40rpx;
+}
+.vip-user-info-box .vip-user-info-content {
+    flex-shrink: 1;
+    display: flex;
+    flex-grow: 0;
+    flex-direction: column;
+    color: #FFE9D3;
+}
+.vip-user-info-box .vip-user-info-content .user-info {
+    width: 600rpx;
+    padding-right: 30rpx;
+    margin-left: 14rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #FFE9D3;
+}
+
+.user-info .user-name {
+    font-size: 36rpx;
+    flex-grow: 0;
+    flex-shrink: 1;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.user-info .user-tag {
+    margin-left: 10rpx;
+    flex-shrink: 0;
+    position: relative;
+    width: 100rpx;
+    height: 32rpx;
+    flex-basis: 100rpx;
+    line-height: 32rpx;
+    text-align: center;
+    border-radius: 16rpx;
+    background-color: #000000;
+}
+.user-info .user-tag:after {
+    position: absolute;
+    left: 0;
+    top: 25%;
+    content: '未开通';
+    display: block;
+    width: 200rpx;
+    font-size: 20px;
+    transform-origin: 0 0;
+    transform: scale(0.5);
+}
+
+.user-info .user-vip-tag:after {
+    content: '泰享会员';
+    font-size: 20px;
+}
+
+.vip-user-info-content .vip-info-text {
+    margin-left: 14rpx;
+    font-size: 24rpx;
+    color: #FFE9D3;
+}
+
+/** 邀请人相关信息 **/
+.vip-inviter-info {
+    margin: 0 30rpx 40rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 28rpx 0 30rpx;
+    height: 68rpx;
+    background-color: #2B2B2B;
+    border-radius: 10rpx;
+    color: #F0CFAE;
+    font-size: 24rpx;
+}
+.vip-inviter-info .show-inviter {
+    width: 98rpx;
+    height: 38rpx;
+}
+
+.vip-page-top .vip-page-top-relative .vip-top-card-box {
+    margin-top: 40rpx;
+    width: 100%;
+}
+
+.vip-page-top .vip-page-top-relative .vip-top-card-box .vip-top-card{
+    position: relative;
+    width: 100%;
+    height: 396rpx;
+    background: url(https://image.tairanmall.com/813b81253f196e3519070fc29681aba45d64f1a7a84ba) no-repeat center center;
+    background-size: 100% 396rpx;
+}
+
+.vip-page-top .vip-page-top-relative .vip-top-card-box .vip-top-card  .vip-card-title {
+    position: absolute;
+    top: 118rpx;
+    left: 70rpx;
+    font-size: 26rpx;
+    color: #8E6143;
+}
+.vip-page-top .vip-page-top-relative .vip-top-card-box .vip-top-card .vip-card-text{
+    position: absolute;
+    top: 238rpx;
+    left: 70rpx;
+    display: flex;
+    height: 78rpx;
+    width: 610rpx;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px dotted #8E6143;
+    color: #8E6143;
+    font-size: 22rpx;
+}
+.vip-card-text .vip-remaining {
+    width: 110rpx;
+    height: 34rpx;
+    line-height: 34rpx;
+    text-align: center;
+    border: 1px solid #946647;
+    color: #946647;
+    border-radius: 18rpx;
+}
+
+.vip-page-top .vip-page-top-relative .vip-top-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F4D5B5;
+    font-size: 36rpx;
+    font-weight: bold;
+}
+
+.vip-page-top .vip-page-top-relative .vip-top-text .vip-v-image {
+    display: inline-block;
+    width: 44rpx;
+    height: 44rpx;
+    border-radius: 50%;
+    margin: 0 8rpx;
+}
+
+/** 特权栏 **/
+.vip-page-top .vip-page-top-relative .vip-rights-tab-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 30rpx;
+    margin-top: 50rpx;
+}
+.vip-page-top .vip-page-top-relative .vip-rights-tab-box .vip-rights-tab {
+    width: 100rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vip-rights-tab .vip-tab-icon {
+    position: relative;
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    background-color: #F7DBBD;
+}
+
+.vip-rights-tab .vip-tab-icon.active:after {
+    box-sizing: border-box;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 100rpx;
+    height: 100rpx;
+    left: -12.5%;
+    top: -12.5%;
+    border-radius: 50%;
+    border: 2px solid rgba(247,219,189, 0.5);
+}
+
+.vip-rights-tab .vip-tab-icon image{
+    display: inline-block;
+    width: 80rpx;
+    height: 80rpx;
+}
+
+.vip-rights-tab .vip-tab-text {
+    color: #FFF4E8;
+    font-size: 24rpx;
+    margin-top: 18rpx;
+}
+
+/** 特权内容 **/
+.vip-page-top .vip-page-top-relative .vip-rights-content-box {
+    width: 100%;
+}
+
+.vip-rights-content-box .vip-rights-content {
+    position: relative;
+    width: 690rpx;
+    height: 356rpx;
+    margin: 0 auto;
+    padding-left: 40rpx;
+    padding-top: 84rpx;
+}
+.vip-rights-content-box .vip-rights-content .use-btn {
+    height: 44rpx;
+    width: 140rpx;
+    color: #353535;
+    border-radius: 22rpx;
+    border: 1px solid #353535;
+    position: absolute;
+    line-height: 44rpx;
+    text-align: center;
+    top: 88rpx;
+    right: 30rpx;
+    font-size: 24rpx;
+}
+.vip-rights-content-box .vip-rights-content .rights-content-title {
+    color: #353535;
+    font-size: 40rpx;
+    font-weight: bold;
+}
+.vip-rights-content .title-border {
+    margin-top: 20rpx;
+    width: 40rpx;
+    height: 0;
+    border-bottom: 2px solid #E0B587;
+}
+.vip-rights-content .vip-rights-texts {
+    margin-top: 20rpx;
+}
+.vip-rights-content .vip-rights-texts .turn-activity-btn {
+    margin-top: 20rpx;
+    width: 180rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+    border: 1px solid #946647;
+    color: #946647;
+    font-size: 24rpx;
+    border-radius: 24rpx;
+}
+.vip-rights-content .vip-rights-text-view {
+    line-height: 36rpx;
+}
+.vip-rights-content .vip-rights-texts .vip-rights-text {
+    font-size: 24rpx;
+    color: #9A6B4B;
+}
+.vip-rights-content_1 {
+    background: url(https://image.tairanmall.com/901dd3acc248d2709fc0c19baeff172e5d64f08eb2fc9) no-repeat center center;
+    background-size: 690rpx 320rpx;
+}
+.vip-rights-content_2 {
+    background: url(https://image.tairanmall.com/75b538e2aa3d821fcc3167d6595792dc5d64f15cd6e04) no-repeat center center;
+    background-size: 690rpx 320rpx;
+}
+.vip-rights-content_3 {
+    background: url(https://image.tairanmall.com/b1e47e5d54773be90753079c1a9556a15d64ee3ddbae1) no-repeat center center;
+    background-size: 690rpx 320rpx;
+}
+.vip-rights-content_4 {
+    background: url(https://image.tairanmall.com/eb1d39c462b3e41ba5be41beb96386945d64ee6dafcaf) no-repeat center center;
+    background-size: 690rpx 320rpx;
+}
+.vip-rights-content_5 {
+    background: url(https://image.tairanmall.com/7433264d88ff3f6ff710da576c4c4b0b5d64ee93c7cda) no-repeat center center;
+    background-size: 690rpx 320rpx;
+}
+
+/** vip活动 **/
+.vip-activity {
+    margin: 82rpx auto 38rpx;
+    width: 690rpx;
+    height: 220rpx;
+    background-color: #F9E7D4;
+    background: url(https://image.tairanmall.com/f310ed3f9d31745d77f11e25b96414da5d64eec22517b) no-repeat center center;
+    background-size: 690rpx 220rpx;
+}
+
+/**  推荐商品  **/
+.vip-goods {
+    width: 100%;
+    background-color: rgba(250,227,205, 0.3);
+    padding-top: 40rpx;
+    padding-bottom: 28rpx;
+}
+.vip-goods .vip-goods-title {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #9A6B4B;
+    margin-bottom: 32rpx;
+}
+.title-line {
+    width: 160rpx;
+    height: 4rpx;
+}
+.vip-goods .vip-goods-title text{
+    display: inline-block;
+    color: #9A6B4B;
+    margin: 0 18rpx;
+}
+.vip-goods .goods-swipe-wrapper{
+
+}
+.vip-goods .goods-swipe-wrapper{
+    overflow: hidden;
+}
+.vip-goods .goods-swipe-wrapper .swipe-box {
+    width:100%;
+}
+.vip-goods .goods-swipe-wrapper .swipe-content{
+    display:-webkit-box;
+    display:-ms-flexbox;
+	display:flex;
+    padding: 0 6rpx;
+
+}
+.vip-goods .goods-swipe-wrapper .item{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+	width: 200rpx;
+	margin: 0 20rpx;
+}
+
+.vip-goods .goods-swipe-wrapper .item .more-box{
+    padding: 32rpx 16rpx 0 20rpx;
+}
+
+.vip-goods .goods-swipe-wrapper .item .more-box .more-img {
+    width: 164rpx;
+    height: 160rpx;
+    background-color: #FCF3E3;
+
+}
+
+.vip-goods .goods-swipe-wrapper .item .more-box .more-text {
+    margin: 14rpx auto 0;
+    height: 42rpx;
+    line-height: 42rpx;
+    width: 120rpx;
+    text-align: center;
+    color: #999999;
+    font-size: 22rpx;
+    border-radius: 22rpx;
+    border: 1px solid rgba(153,153,153,0.5);
+}
+
+
+.vip-goods .goods-swipe-wrapper .item .img{
+	width: 200rpx;
+	height: 200rpx;
+}
+.vip-goods .goods-swipe-wrapper .item .title{
+    height: 32rpx;
+	line-height: 32rpx;
+	font-size: 24rpx;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.vip-goods .goods-swipe-wrapper .item .price{
+	text-align:center;
+	color: #D81317;
+	height: 30rpx;
+	line-height: 30rpx;
+	font-size: 26rpx;
+}
+
+
+.vip-goods .goods-swipe-wrapper .item .discount{
+    display: inline-block;
+    height: 32rpx;
+    padding: 0 10rpx;
+    line-height: 32rpx;
+    text-align: center;
+    background-color: #353535;
+    color: #F9F2EB;
+    font-size: 20rpx;
+    border-radius: 16rpx;
+}
+
+/** 协议 **/
+.agreement-box {
+    display: flex;
+    height: 80rpx;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.agreement-icon-tap {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.agreement-box .agreement-icon {
+    width: 36rpx;
+    height: 36rpx;
+    border-radius: 50%;
+}
+.agreement-box .not-agreement-icon {
+    border: 1px solid #353535;
+
+}
+.agreement-box .agreement-text1 {
+    padding-left: 16rpx;
+    color: #333333;
+    font-size: 24rpx;
+}
+
+.agreement-box .agreement-text2 {
+    margin-left: 4rpx;
+    color: #2876E1;
+    font-size: 24rpx;
+}
+.open-btn {
+    height: 120rpx;
+    line-height: 120rpx;
+    text-align: center;
+    background-color: #F7DBBD;
+    color: #9A6B4B;
+    font-size: 36rpx;
+    font-weight: bold;
+}
+.open-disable{
+  background-color: #c9c9c9;
+  color: #fff
+}
+
+/** 邀请人信息 **/
+.inviter-info-popup {
+    position: absolute;
+    z-index: 12;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 560rpx;
+    height: 460rpx;
+    border-radius: 18rpx;
+    background-color: #ffffff;
+}
+.inviter-info-popup .inviter-popup-box {
+    position: relative;
+}
+.inviter-info-popup .inviter-popup-title {
+    padding-top: 50rpx;
+    text-align: center;
+    font-size: 34rpx;
+    color: #473728;
+}
+.inviter-info-popup .inviter-popup-code {
+    margin-top: 60rpx;
+    padding: 26rpx 94rpx;
+}
+
+.inviter-info-popup .inviter-popup-code input {
+    font-size: 26rpx;
+    color: #473728;
+}
+.inviter-info-popup .inviter-popup-btn{
+    margin-top: 50rpx;
+    margin-left: 60rpx;
+    width: 440rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    text-align: center;
+    border-radius: 44rpx;
+    background: linear-gradient(to right, #D09B5A, #EECFB1);
+    color: #473728;
+    font-size: 36rpx;
+}
+.inviter-info-popup .inviter-popup-close{
+    position: absolute;
+    right: 0;
+    top: -102rpx;
+    width: 62rpx;
+    height: 62rpx;
+}

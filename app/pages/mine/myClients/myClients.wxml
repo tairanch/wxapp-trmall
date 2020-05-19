@@ -1,0 +1,66 @@
+<!--分包文件-->
+<!-- tab导航栏 -->
+<!-- scroll-left属性可以控制滚动条位置 -->
+<!-- scroll-with-animation滚动添加动画过渡 -->
+<wxs module="tools" src="./myClients.wxs"></wxs>
+<scroll-view scroll-x="true" class="nav" scroll-with-animation="{{true}}" xmlns:wx="http://java.sun.com/JSP/Page">
+  <block wx:for="{{navData}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx">
+    <view class="nav-item {{currentTab == idx ?'active':''}}" data-current="{{idx}}" bindtap="onSwitchNav">
+      <text>{{navItem}}</text>
+    </view>
+  </block>
+</scroll-view>
+
+<!-- 页面内容 -->
+<swiper class="tab-box" current="{{currentTab}}" duration="300" bindchange="onSwitchTab" >
+  <swiper-item class="tab-content" wx:for="{{navData}}" wx:for-item="tabItem" wx:for-index="idx" wx:key="idx">
+    <scroll-view style="height: 100%;" scroll-y scroll-top="{{scrollTop}}" bindscrolltolower="reactBottom" bindscrolltoupper='refreshTop'>
+      <view class="myclients-body" wx:if="{{dataLists.length > 0}}">
+        <block wx:for='{{dataLists}}' wx:key='{{dataLists}}'>
+            <view class='myclients-content'>
+                <view class="myclients-left">
+                    <image class="myclients-photo" src="{{item.avatar || baseimg}}"></image>
+                </view>
+                <view class="myclients-right" wx:if="{{currentTab == 0}}">
+                    <view class="myclients-right-top">
+                        <span class="myclients-right-name">{{item.name}}</span>
+                        <view class="has-namecard" wx:if="{{item.is_salesman}}">已开名片</view>
+                    </view>
+                    <view class="myclients-right-info" wx:if="{{item.is_salesman}}">
+                        {{item.phone}}
+                    </view>
+                     <view class="myclients-right-info" wx:else>
+                        {{tools.handleId(item.phone)}}
+                    </view>
+                    <view class="myclients-right-time">
+                        {{item.register_time}}
+                    </view>
+                </view>
+                <view class="myclients-right" wx:else>
+                    <view class="myclients-right-top">
+                        <span class="myclients-right-name">{{item.name}}</span>
+                    </view>
+                    <view class="myclients-right-info">
+                        <view class="myclients-right-info-num">
+                            下单数{{item.order_count}}
+                        </view>
+                        <view class="myclients-right-info-money">
+                            <span>累计预估佣金</span>
+                            <span class="myclients-right-info-money-red">￥{{item.evaluate_income}}</span>
+                        </view>
+                    </view>
+                    <view class="myclients-right-time">
+                        最近一次购买时间：{{item.last_order_time}}
+                    </view>
+                </view>
+            </view>
+        </block>
+      </view>
+      <view class="myclients-body-nodata" wx:else>
+          <view class="myclients-body-nodataworld">
+              暂无用户
+          </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>

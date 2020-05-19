@@ -1,0 +1,32 @@
+view {
+    box-sizing: border-box;
+}
+image {
+    box-sizing: border-box;
+}
+text {
+    box-sizing: border-box;
+}
+
+.modal-popup {
+    position: fixed;
+    z-index: 12;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20rpx;
+    background-color: #ffffff;
+}
+.modal-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn1, .btn2 {
+    width: 270rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

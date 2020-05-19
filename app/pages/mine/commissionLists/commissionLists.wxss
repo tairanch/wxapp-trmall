@@ -1,0 +1,140 @@
+/* pages/mine/commissionLists/commissionLists.wxss */
+
+.commissionLists_page {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f4f4f4;
+}
+
+/* 分组头部 */
+.section-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+}
+
+
+/* 分组时间 */
+.section-header-date {
+    color: #353535;
+    font-size: 12pt;
+    margin-left: 15px;
+}
+
+.section-header-amount {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-end;
+    margin-right:15px;
+}
+
+.amount-text {
+    color:#999999;
+    font-size:10pt;
+}
+
+.list-cell-view {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 0 10px 10px 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.cell-header-view {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+
+.header-left-view {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+}
+
+.order-text {
+    font-size: 30rpx;
+    color: #999999;
+}
+
+.copy-icon-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+
+.copy-icon {
+    width: 12px;
+    height: 12px;
+}
+
+.un-pocket-text {
+    font-size: 30rpx;
+}
+
+.cell-content-view {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.cell-item-image {
+    width: 64px;
+    height: 64px;
+}
+
+.cell-content-right-view {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10px;
+    height: 64px;
+}
+
+.content-title {
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    font-size: 10pt;
+    color: #353535;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.content-amount {
+    font-size: 10pt;
+    color: #E60A30;
+}
+
+.empty-view {
+    display: flex;
+    flex: 1;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.empty-text {
+    font-size: 11pt;
+    color: #999999;
+}

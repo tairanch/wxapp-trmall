@@ -1,0 +1,75 @@
+{
+  "pages": [
+    "pages/mall/index",
+    "pages/login/login",
+    "pages/beforelogin/index",
+    "pages/group/index",
+    "pages/shopCart/index",
+    "pages/bags/index",
+    "pages/wxpage/wxpage",
+    "pages/sharepage/sharepage",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/pay/pay",
+    "pages/out/out",
+    "pages/jumppage/index",
+    "pages/exchangeItem/exchangeItem",
+    "pages/maintenance/index",
+    "pages/configpage/index",
+    "pages/h5wxpage/index",
+    "pages/mine/mine/index",
+    "pages/mine/cashOut/cashOut",
+    "pages/mine/promote/index",
+    "pages/mine/balance/balance",
+    "pages/mine/cashOK/cashOK",
+    "pages/mine/cashCode/cashCode",
+    "pages/mine/verifyName/verifyName",
+    "pages/mine/verifyOK/verifyOK",
+    "pages/mine/marketingDetail/marketingDetail",
+    "pages/mine/myClients/myClients",
+    "pages/mine/commissionLists/commissionLists",
+    "pages/mine/commissionExplain/commissionExplain",
+    "pages/mine/popularShare/popularShare",
+    "pages/vipPage/vipPage",
+    "pages/agreements/vipAgreement/vipAgreement",
+    "pages/vipResult/vipResult",
+    "schemaPage/index"
+  ],
+  "subpackages": [
+    {
+      "root": "pages/product/",
+      "pages": [
+        "item-detail/index",
+        "groupRule/index",
+        "shareMiddlePage/shareMiddlePage"
+      ]
+    }
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于门店推荐"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "泰然城",
+    "navigationBarTextStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 60000,
+    "downloadFile": 60000
+  },
+  "plugins": {
+    "myPlugin": {
+      "version": "1.1.1",
+      "provider": "wxefa63d84fe9f64a2"
+    }
+  },
+  "debug": false,
+  "sitemapLocation": "sitemap.json",
+  "navigateToMiniProgramAppIdList": [
+    "wxedcbb3e02fc8dfb5",
+    "wxff130f20113777d2"
+  ]
+}

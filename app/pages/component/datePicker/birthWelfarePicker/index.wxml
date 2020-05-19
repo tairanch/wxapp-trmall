@@ -1,0 +1,28 @@
+<view>
+    <view class="birth-welfare-picker">
+        <view class="birth-welfare-texts">
+            <view class="birth-welfare-text1">填写生日领福利</view>
+            <view class="birth-welfare-text2">完善您的个人信息,泰然城为您发放生日福利</view>
+        </view>
+        <view class="birth-welfare-texts-bg"></view>
+
+        <view class="birth-welfare-picker-com">
+            <date-picker
+                    bindgetValue="getDateValue"
+                    pickerClass="birth-welfare-picker"
+                    pickerItemClass="birth-welfare-picker-item"
+                    indicatorClass="birth-welfare-picker-indicator"
+                    viewClass="birth-welfare-picker-view"
+                    selectedClass="birth-welfare-picker-seleted-view"
+                    yearsClass="birth-welfare-years"
+                    monthsClass="birth-welfare-months"
+                    daysClass="birth-welfare-days"
+            ></date-picker>
+        </view>
+        <view class="birth-welfare-picker-sure">
+            <view class="birthdate-sure-btn">
+                <view bindtap="birthSure">确定</view>
+            </view>
+        </view>
+    </view>
+</view>

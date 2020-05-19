@@ -1,0 +1,26 @@
+/* pages/mine/commissionExplain/commissionExplain.wxss */
+
+.commissionExplain_page {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.text-bg-view {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.title-text {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #353535;
+}
+
+.desc-text {
+    font-size: 10pt;
+    color: #666666;
+}

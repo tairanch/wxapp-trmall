@@ -1,0 +1,162 @@
+<view class="mine_page">
+  <!--头部视图  -->
+  <view class='header'>
+    <!--头像  -->
+    <view class='headPhoto_body' bindtap="listItemCliclk" data-list='listuser'>
+      <image wx:if='{{userInfo.avatar}}' class='headPhoto' src='{{userInfo.avatar}}'></image>
+      <image wx:elif='{{globalUserInfo.isNew}}' class='headPhoto' src='{{globalUserInfo.avatarUrl}}'></image>
+      <image wx:else class='headPhoto' src='/image/head_icon.png'></image>
+    </view>
+    <view class="head-info">
+      <!--昵称  -->
+      <text wx:if='{{vipInfo.member_name}}' class='name' style="top:{{userInfo.motto ? '32%':'38%'}}">{{vipInfo.member_name}}</text>
+      <text wx:elif='{{userInfo.nickname}}' class='name' style="top:{{userInfo.motto ? '32%':'38%'}}">{{userInfo.nickname}}</text>
+      <text wx:elif='{{userInfo.phone}}' class='name' style="top:{{userInfo.motto ? '32%':'38%'}}">{{userInfo.phone}}</text>
+      <text wx:else='{{userInfo.nickname}}' class='name' style="top:{{userInfo.motto ? '32%':'38%'}}">{{globalUserInfo.nickName}}</text>
+      <!--vip标记 -->
+      <view class="vip-tag vip-tag-common" wx:if="{{!vipInfo.is_vip}}">
+        <text>普通会员</text>
+      </view>
+      <image class="vip-tag" src="/image/vipPage/vip-tag.png" wx:else></image>
+
+    </view>
+
+    <image class='head_back' src='/image/bg@2x.png'></image>
+  </view>
+
+  <view bindtap="turnVipPage" class="vip-info-box">
+    <view class="vip-info">
+      <view class="vip-info-text1">{{ vipInfo.is_vip ? "已开通，剩" + vipInfo.remain_days + "天":"享5大特权"}}</view>
+      <view class="vip-info-text2">{{ vipInfo.is_vip ? "查看特权":"立即开通"}}</view>
+    </view>
+  </view>
+
+  <!--主视图  -->
+  <view class='body'>
+    <view class='order' bindtap="checkOrderList" data-type='0'>
+      <view class='order_item'>
+        <text>我的订单</text>
+      </view>
+      <view class='order_item_small'>
+        <text>查看全部</text>
+        <image class='arrow' src='/image/mine/arrow_right.png'></image>
+      </view>
+    </view>
+    <!--订单类型  -->
+    <view class='orderType'>
+      <!--待付款  -->
+      <view class='orderType_item' bindtap="checkOrderList" data-type='1'>
+        <image src='/image/mine/status-wait-pay-icon.png'></image>
+        <text class='orderType_name'>待付款</text>
+        <text wx:if='{{orderCountData.wait_pay}}' class='mount'>{{orderCountData.wait_pay}}</text>
+      </view>
+      <!--待发发货  -->
+      <view class='orderType_item' bindtap="checkOrderList" data-type='2'>
+        <image src='/image/mine/status-wait-send-icon.png'></image>
+        <text class='orderType_name'>待发货</text>
+        <text wx:if='{{orderCountData.wait_send}}' class='mount'>{{orderCountData.wait_send}}</text>
+      </view>
+      <!--待收货  -->
+      <view class='orderType_item' bindtap="checkOrderList" data-type='3'>
+        <image src='/image/mine/status-wait-receive-icon.png'></image>
+        <text class='orderType_name'>待收货</text>
+        <text wx:if='{{orderCountData.wait_confirm}}' class='mount'>{{orderCountData.wait_confirm}}</text>
+      </view>
+      <!--交易成功  -->
+      <view class='orderType_item' bindtap="checkOrderList" data-type='4'>
+        <image src='/image/mine/status-wait-evaluate-icon.png'></image>
+        <text class='orderType_name'>待评价</text>
+        <text wx:if='{{orderCountData.wait_rate}}' class='mount'>{{orderCountData.wait_rate}}</text>
+      </view>
+      <!--退货  -->
+      <view class='orderType_item' bindtap="checkOrderList" data-type='5'>
+        <image src='/image/mine/after-sale-icon.png'></image>
+        <text class='orderType_name'>退货/售后</text>
+        <text wx:if='{{orderCountData.returnGoodsCount}}' class='mount'>{{orderCountData.returnGoodsCount}}</text>
+      </view>
+    </view>
+    <view class='space'></view>
+      <!--营销管理  -->
+      <view class='list' bindtap="onPromoteManagerItemClick">
+          <view class='list_left'>
+              <text>营销管理</text>
+          </view>
+          <view class='list_right'>
+              <image class='arrow' src='/image/mine/arrow_right.png'></image>
+          </view>
+      </view>
+      <view class='line'></view>
+    <!--我的拼团  -->
+    <view class='list' bindtap="listItemCliclk" data-list='list0'>
+      <view class='list_left'>
+        <text>我的拼团</text>
+      </view>
+      <view class='list_right'>
+        <text wx:if='{{stripData.group_success_count>0}}'>{{stripData.group_success_count}}</text>
+        <image class='arrow' src='/image/mine/arrow_right.png'></image>
+      </view>
+    </view>
+    <view class='line'></view>
+    <!--我的收藏  -->
+    <view class='list' bindtap="listItemCliclk" data-list='list1'>
+      <view class='list_left'>
+        <text>我的收藏</text>
+      </view>
+      <view class='list_right'>
+        <text wx:if='{{stripData.collection_count>0}}'>{{stripData.collection_count}}</text>
+        <image class='arrow' src='/image/mine/arrow_right.png'></image>
+      </view>
+    </view>
+    <view class='line'></view>
+    <!--卡券包  -->
+    <view class='list' bindtap="listItemCliclk" data-list='list2'>
+      <view class='list_left'>
+        <text>优惠券</text>
+      </view>
+      <view class='list_right'>
+        <text wx:if='{{stripData.avail_coupon_count>0}}'>{{stripData.avail_coupon_count}}</text>
+        <image class='arrow' src='/image/mine/arrow_right.png'></image>
+      </view>
+      <!-- <button hover-class='none' class='contact' open-type='contact' session-from='from_common'></button> -->
+    </view>
+    <view class='line'></view>
+    <view class='list' bindtap="listItemCliclk" data-list='list5'>
+      <view class='list_left'>
+        <text>红包</text>
+      </view>
+      <view class='list_right'>
+        <text wx:if='{{stripData.red_packet_count>0}}'>{{stripData.red_packet_count}}</text>
+        <image class='arrow' src='/image/mine/arrow_right.png'></image>
+      </view>
+    </view>
+    <view class='line'></view>
+    <!-- e卡管理 -->
+    <view class='list' bindtap="listItemCliclk" data-list='list3'>
+      <view class='list_left'>
+        <text>e卡管理</text>
+      </view>
+      <view class='list_right'>
+        <text wx:if='{{eCardCount.totalUsableAmount>0}}'>{{eCardCount.totalUsableAmount}}</text>
+        <image class='arrow' src='/image/mine/arrow_right.png'></image>
+      </view>
+    </view>
+    <view class='space'></view>
+    <!--联系客服  -->
+    <view class='list' bindtap="listItemCliclk" data-list='list4'>
+      <view class='list_left'>
+        <text>联系客服</text>
+      </view>
+      <image class='arrow' src='/image/mine/arrow_right.png'></image>
+    </view>
+    <view class='space'></view>
+
+    <!--<view class='list' bindtap="clearCliclk" data-list='list4'>-->
+      <!--<view class='list_left'>-->
+        <!--<text>解绑</text>-->
+      <!--</view>-->
+      <!--<image class='arrow' src='/image/mine/arrow_right.png'></image>-->
+    <!--</view>-->
+    <!--<view class='space'></view>-->
+  </view>
+  <navigator-bar route="{{route}}"></navigator-bar>
+</view>

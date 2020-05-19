@@ -1,0 +1,75 @@
+view {
+    box-sizing: border-box;
+}
+image {
+    box-sizing: border-box;
+}
+text {
+    box-sizing: border-box;
+}
+
+.birth-welfare-picker {
+    position: fixed;
+    width: 630rpx;
+    height: 820rpx;
+    z-index: 12;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20rpx;
+    background-color: #ffffff;
+}
+
+.birth-welfare-picker .birth-welfare-texts {
+    width: 100%;
+    height: 160rpx;
+    padding-top: 30rpx;
+    text-align: center;
+    color: #F4D1AA;
+    background-color: #000000;
+    border-top-left-radius: 20rpx;
+    border-top-right-radius: 20rpx;
+}
+.birth-welfare-picker .birth-welfare-text1 {
+    font-size: 38rpx;
+}
+
+.birth-welfare-picker .birth-welfare-text2 {
+    margin-top: 10rpx;
+    font-size: 26rpx;
+}
+.birth-welfare-picker .birth-welfare-texts-bg {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-top-width: 40rpx;
+    border-top-bottom: 40rpx;
+    border-left-width: 315rpx;
+    border-right-width: 315rpx;
+    border-color: #000000 transparent transparent transparent;
+
+}
+.birth-welfare-picker .birth-welfare-picker-com {
+    margin-top: 60rpx;
+    padding-left: 52rpx;
+    padding-right: 50rpx;
+}
+.birth-welfare-picker .birth-welfare-picker-sure {
+    margin-top: 150rpx;
+}
+
+.birth-welfare-picker-sure  .birthdate-sure-btn {
+    margin: 0 50rpx;
+}
+.birth-welfare-picker-sure .birthdate-sure-btn view {
+    width: 530rpx;
+    height: 88rpx;
+    border-radius: 44rpx;
+    background: linear-gradient(to right, #D09B5A, #EECFB1);
+    line-height: 88rpx;
+    text-align: center;
+    font-size: 36rpx;
+    color: #473728;
+}
+
+

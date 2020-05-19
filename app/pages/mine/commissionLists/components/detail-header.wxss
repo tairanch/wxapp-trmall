@@ -1,0 +1,64 @@
+/* pages/mine/commissionLists/components/detail-header.wxss */
+
+.detail-header-view {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 44px;
+    background-color: white;
+}
+
+.header-left-view {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.select-date-view {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.select-type-view {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.select-text {
+    font-size: 11pt;
+    color: #353535;
+}
+
+.select-arrow {
+    margin-left: 5px;
+    width: 10px;
+    height: 6px;
+}
+
+.header-right-view {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.tips-text {
+    font-size: 11pt;
+    color: #999999;
+}
+
+.ask-icon {
+    margin-left: 5px;
+    width: 16px;
+    height: 16px;
+}
+
+.rotateDown{
+    transform: rotate(180deg);
+}

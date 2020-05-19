@@ -1,0 +1,68 @@
+view {
+    box-sizing: border-box;
+}
+image {
+    box-sizing: border-box;
+}
+text {
+    box-sizing: border-box;
+}
+.date-picker-content-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+.date-picker-content-item {
+  width: 33.3%;
+  text-align: center;
+}
+
+/******** 扩展组件相关的class样式都写在这里 ********/
+
+/*** birth-welfare-picker 生日选择福利组件 **/
+.birth-welfare-picker {
+    width: 530rpx;
+}
+.birth-welfare-picker-item {
+    box-sizing: border-box;
+    height: 258rpx;
+}
+.birth-welfare-picker-indicator {
+    box-sizing: border-box;
+    height: 86rpx;
+    position: relative;
+}
+.birth-welfare-picker-indicator: after {
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    border: 1px solid #E8DDD4;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    transform: scale(0.5);
+}
+.birth-welfare-picker-view {
+    box-sizing: border-box;
+    line-height: 86rpx;
+    color: #BC8F57;
+    font-size: 28rpx;
+}
+.birth-welfare-picker-seleted-view {
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 86rpx;
+    color: #BC8F57;
+    font-size: 34rpx;
+}
+.birth-welfare-years.birth-welfare-picker-view {
+    margin-left: 32rpx;
+}
+.birth-welfare-days.birth-welfare-picker-view {
+    margin-right: 32rpx;
+}
+

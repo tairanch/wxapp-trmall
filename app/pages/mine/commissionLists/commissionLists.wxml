@@ -1,0 +1,46 @@
+<!--pages/mine/commissionLists/commissionLists.wxml-->
+<wxs module="ListUtil" src="./commissionLists.wxs"></wxs>
+<view class="commissionLists_page">
+
+    <!--顶部选择条-->
+    <detail-header currentMouth="{{currentServerDate}}"
+                   bind:tipsBtnClick="onTipsBtnClick"
+                   bind:selectDateChange="onSelectDateChange"
+                   bind:selectDetailTypeChange="onSelectDetailTypeChange"/>
+
+    <block wx:if="{{dataList && dataList.length>0}}" wx:for="{{dataList}}" wx:for-index="sectionIdx" wx:for-item="sectionItem">
+
+        <view class='section-header' wx:if="{{dataList && dataList.length>0}}">
+            <text class='section-header-date'>{{sectionItem.created_at}}</text>
+            <view class='section-header-amount'>
+                <text class="amount-text">待入账 ¥{{sectionItem.month_unPocket_settlement}}</text>
+                <text class="amount-text">已入账 ¥{{sectionItem.month_Pocket_settlement}}</text>
+            </view>
+        </view>
+
+        <block wx:for="{{sectionItem.res}}" wx:for-index="idx" wx:for-item="item">
+            <view class="list-cell-view">
+                <view class="cell-header-view">
+                    <view class="header-left-view">
+                        <text class="order-text" selectable>订单编号：{{item.shop_order_id}}</text>
+                        <view class="copy-icon-bg" bindtap="copyBtnClick" data-order_id="{{item.shop_order_id}}">
+                            <image class="copy-icon" src="/image/mine/copy.png"/>
+                        </view>
+                    </view>
+                    <text class="un-pocket-text" style="color: {{ListUtil.getStatusTextColor(item.status)}};">{{ListUtil.getStatusText(item.status)}}</text>
+                </view>
+                <view class="cell-content-view" bindtap="onCellClick" data-selected_item="{{item}}">
+                    <image class="cell-item-image" src="{{item.item_image}}" />
+                    <view class="cell-content-right-view">
+                        <text class="content-title" >{{item.item_title}}</text>
+                        <text class="content-amount">{{ListUtil.getAmountText(item.type, item.amount)}}</text>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </block>
+    <view wx:if="{{!dataList || dataList.length==0}}" class="empty-view" >
+        <text class="empty-text">暂无记录</text>
+    </view>
+
+</view>

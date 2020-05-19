@@ -1,0 +1,63 @@
+<!--pages/page/page.wxml-->
+<view class="marketing-detail">
+    <view class="marketing-detail-title">
+        <view class="marketing-detail-type-content">
+            <image class="marketing-detail-type-img" src="{{typeicon}}"></image>
+            <span class="marketing-detail-type {{spec_white ? 'marketing-detail-type-white' : ''}}">{{datainfo.order_info.order_status}}</span>
+        </view>
+        <view class="marketing-detail-info">
+            <view class="marketing-detail-image">
+                <image class="marketing-detail-images" wx:if="{{datainfo.item_info.primary_image}}" src="{{datainfo.item_info.primary_image}}"></image>
+            </view>
+            <view class="marketing-detail-world">
+                <view class="marketing-detail-world-spacetwo">{{datainfo.item_info.title}}</view>
+                <view class="marketing-detail-world-space">
+                    <span>￥{{datainfo.item_info.price}}</span>
+                    <span>x {{datainfo.item_info.num}}</span>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="marketing-detail-space"></view>
+
+    <view class="marketing-detail-backcard">
+        <!-- <view class="marketing-detail-backitem">
+            <text class="marketing-detail-backitem-speckey">返利详情</text>
+        </view> -->
+        <block wx:for="{{back_data_title}}" wx:key="index">
+            <view class="marketing-detail-backitem">
+                <text class="marketing-detail-backitem-key">{{item}}</text>
+                <text class="marketing-detail-backitem-value">￥{{back_data_value[index]}}</text>
+            </view>
+        </block>
+        <view class="marketing-detail-backitem">
+            <view class="marketing-detail-backitem-speckey">
+                <span>
+                    入账佣金 
+                </span>
+                <span class="marketing-detail-backitem-has-manual" wx:if="{{has_manual}}">
+                    (平台调整)
+                </span>
+            </view>
+            <text class="marketing-detail-backitem-redvalue">￥{{accounted_bonus}}</text>
+        </view>
+    </view>
+
+    <view class="marketing-detail-card">
+        <block wx:for="{{copy_data_title}}" wx:key="index">
+            <view class="marketing-detail-card-item" wx:if="{{copy_data_value[index] != ''}}">
+                <span >{{item}}</span>
+                <span >{{copy_data_value[index]}}</span>
+                <image wx:if="{{index === 0}}" class="marketing-detail-copy-img" src="{{copyimg}}" bindtap="copyText"  data-value="{{copy_data_value[index]}}"></image>
+            </view>
+        </block>
+    </view>
+
+    <view class="marketing-detail-bottom">
+        <text class="marketing-detail-bottom-title">*说明</text>
+        <text class="marketing-detail-bottom-world">预估佣金为客户下单付款成功后，最多可得的佣金。若订单无退款，则预估佣金将全部入账结算，若客户付款后发起退货退款，则需扣除对应的佣金。</text>
+    </view>
+
+</view>
+
+<!-- bindtap="copyText" -->

@@ -1,0 +1,111 @@
+<wxs module="filters" src="../filter.wxs"></wxs>
+  <view class='scroll-view-fixed'>
+    <scroll-view 
+      class="scroll-view-fixed-scroll" 
+      scroll-x style="width: 100%" 
+      scroll-into-view="{{toViewItem}}"
+      scroll-with-animation="true">
+      <block wx:for="{{categoryList}}" wx:key="*this">
+        <view bindtap="typeSelect" 
+              id='toViewItem{{index}}'
+              data-index="{{index}}" 
+              data-item="{{item}}" 
+              wx:if="{{item.pic == 'selected'}}" 
+              class="{{select_index==index?'image_selected':'image_normal'}}">
+          <image class='item-img' src='../../image/choose@3x.png'></image>
+          <view>{{item.name}}</view>
+        </view>
+        <view bindtap="typeSelect"
+              id='toViewItem{{index}}' 
+              data-index="{{index}}" 
+              data-item="{{item}}" 
+              wx:elif="{{item.pic == 'is_coming'}}" 
+              class="{{select_index==index?'image_selected':'image_normal'}}">
+          <image class='item-img' src='../../image/willstart@3x.png'></image>
+          <view>{{item.name}}</view>
+        </view>
+        <view bindtap="typeSelect"
+              id='toViewItem{{index}}' 
+              data-index="{{index}}" 
+              data-item="{{item}}" 
+              wx:else 
+              class="{{select_index==index?'image_selected':'image_normal'}}">
+          <image class='item-img' src='{{item.pic}}'></image>
+          <view>{{item.name}}</view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+
+   <view class="tab-content">
+      <view  class='withnodata' wx:if="{{listNoData}}">
+        <image src='../../image/common/noactivity.png' mode='widthFix' ></image>
+        <text class='withnodata-world'>上架中，活动即将开始~</text>
+      </view>
+      <view class='loading'  wx:if="{{!listNoData && goodsList.length<=0}}">
+        <loading/>
+      </view>
+      <view wx:else>
+        <view class='list'>
+          <block wx:for="{{goodsList}}" wx:key="{{index}}">
+            <view class='item' bindtap='godetail' data-itemid="{{item.item_id}}">
+              <view class="groupPerson {{imgShowArr[index]?'active':''}}">
+                {{item.group_person}}人团
+              </view>
+              <image mode='aspectFill' class="photo {{imgShowArr[index]?'active':''}}" data-img-show='{{imgShowArr[index]}}'
+               src='{{imgShowArr[index]? filters.imgsmall(item.primary_image): "../../image/common/item-default.png"}}'>
+               </image>
+              
+              <text class='title'>{{item.title}}</text>
+              <view class='detail'>
+                <view class='colum'>
+                  <text class='price' 
+                    wx:if="{{item.group_price > 0}}">
+                      <text class='smallprice'>￥</text>
+                      <text class='bagprice'>{{filters.toFix(item.group_price)}}</text>
+                    </text>
+                  <text class='price' wx:else>
+                    <text class='smallprice'>￥</text>
+                    <text class='bagprice'>{{item.group_price}}</text>
+                  </text>
+                  <text class='old_price' 
+                    wx:if="{{item.price > 0}}">
+                    单买￥{{filters.toFix(item.price)}}</text>
+                  <text class='old_price' wx:else>单买￥{{item.price}}</text>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+
+        <view wx:if="{{arrivebottom}}" class="marginbottom">
+          <button class='bottom-btn hid-beginbtn' 
+                  bindtap="typeSelect" 
+                  data-index="{{0}}" 
+                  data-item="{{categoryList[0]}}" 
+                  wx:if="{{select_index+1 == categoryList.length}}">
+            <view class='scan-continue'>继续浏览 {{categoryList[0]['name']}}</view>
+            <image class='arrow' src='../../image/mine/arrow_right.png'></image>
+          </button>
+          <button class='bottom-btn' 
+                  bindtap="typeSelect" 
+                  data-index="{{select_index + 1}}" 
+                  data-item="{{categoryList[select_index + 1]}}" 
+                  wx:else>
+            <view class='scan-continue'>继续浏览 {{categoryList[select_index + 1]['name']}}</view>
+            <image class='arrow' src='../../image/mine/arrow_right.png'></image>
+          </button>
+        </view>
+        
+        <view wx:if="{{loadmore}}" class='bottom-loadmore'>
+          <image class='loadmore-img' src='../../image/common/loading.gif'></image>
+          <text>正在加载中...</text>
+        </view>
+      </view>
+  </view>
+
+
+<view class='group-count'>
+
+</view>
+<navigator-bar route="{{route}}"></navigator-bar>

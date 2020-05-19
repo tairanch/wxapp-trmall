@@ -1,0 +1,63 @@
+
+var getStatusTextColor = function (status) {
+
+    var color = '#999999';
+
+    if (status == 20) {
+
+            color = '#4D7BFE';
+
+        } else if (status == 50) {
+
+            color = '#07C160';
+
+        } else if (status == 60) {
+
+            color = '#999999';
+
+        }
+
+    return color;
+};
+
+
+var getAmountText = function (type, amount) {
+
+    var str = '';
+
+    if (type == 10) {
+
+        // 佣金
+        str = '佣金 ¥'+amount;
+
+    }
+
+    return str;
+};
+
+var getStatusText = function (status) {
+
+    var str = '';
+
+    if (status == 20) {
+
+        str = '待入账';
+
+    } else if (status == 50) {
+
+        str = '已入账';
+
+    } else if (status == 60) {
+
+        str = '取消入账';
+
+    }
+
+    return str;
+};
+
+module.exports = {
+    getAmountText: getAmountText,
+    getStatusText: getStatusText,
+    getStatusTextColor: getStatusTextColor
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "拼团",
+  "usingComponents": {
+    "loading": "../component/loading/loading",
+    "navigator-bar": "../component/navigator/navigator"
+  }
+}

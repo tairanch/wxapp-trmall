@@ -1,0 +1,99 @@
+<view class='page-container'>
+    <view class="page-bg-view">
+        <!-- 头部背景 -->
+        <image class='image-background' src='/image/mine/promote_backgroud.png'></image>
+
+        <view class='position-view'>
+            <view class='header-bg-view'>
+                <view class="head-image-bg-view">
+                    <image class="header-image-view" src="{{avatar ? avatar : '/image/mine/head_icon.png'}}"></image>
+                </view>
+                <text class="nick-name-text">{{nickName}}</text>
+            </view>
+
+            <!--账户余额-->
+            <view class='balance-part-view'>
+                <view class='balance-view'>
+                    <text class='balance-desc-text'>账户余额(元)</text>
+                    <text class='balance-text'>{{assetInfo.amount}}</text>
+                </view>
+                <view class='cash-out-btn' bindtap='cashOutBtnClick'>
+                    <view class='cash-text-bg'>
+                        <text class='cash-text'>提现 ></text>
+                    </view>
+                </view>
+            </view>
+
+            <!--推广佣金-->
+            <view class='income-card-view' style="margin-top: 10px" bindtap='currentMonthTotalBtnClick' data-income='{{assetInfo.income}}'>
+                <view class="income-section-view">
+                    <text class="income-section-title">推广佣金</text>
+                    <image class='arrow' src='/image/mine/arrow_right.png'></image>
+                </view>
+
+                <!--累积余额-->
+                <view class='bottom-part-view'>
+                    <view class='total-view'>
+                        <text class='income-text'>{{assetInfo.income}}</text>
+                        <text class='income-desc-text'>累计收益(元)</text>
+                    </view>
+                    <view class='total-view'>
+                        <text class='income-text'>{{assetInfo.predict_income}}</text>
+                        <text class='income-desc-text'>本月预计收入(元)</text>
+                    </view>
+                </view>
+
+            </view>
+
+            <!--我的客户-->
+            <view class='income-card-view'>
+                <view class="income-section-view" bindtap='myClientBtnClick' data-btntype='inviteType'>
+                    <text class="income-section-title">我的客户</text>
+                    <image class='arrow' src='/image/mine/arrow_right.png'></image>
+                </view>
+
+                <!--累积余额-->
+                <view class='bottom-part-view'>
+                    <view class='total-view'  bindtap='myClientBtnClick' data-btntype='inviteType'>
+                        <text class='income-text'>{{assetInfo.invite_total}}</text>
+                        <text class='income-desc-text'>邀请客户</text>
+                    </view>
+                    <view class='total-view'  bindtap='myClientBtnClick' data-btntype='orderType'>
+                        <text class='income-text'>{{assetInfo.order_total}}</text>
+                        <text class='income-desc-text'>下单客户</text>
+                    </view>
+                </view>
+
+            </view>
+        </view>
+    </view>
+
+    <!--<view class="bottom-share-bg">-->
+        <!--<view class="bottom-share-btn" bindtap='hotShareBtnClick'>-->
+            <!--<text style="font-size: 16px; color: white">热门分享 ></text>-->
+        <!--</view>-->
+    <!--</view>-->
+
+    <!--实名认证 模态视图-->
+    <view wx:if="{{showModelView}}" class='model-view'>
+        <view class='mode-sub-view'>
+            <view class='top-close-bg-view'>
+                <view class='close-btn' bindtap='closeBtnClick'>
+                    <image class='close-image' src='/image/mine/close_btn_icon.png'></image>
+                </view>
+            </view>
+            <text class='model-title'>实名认证</text>
+            <text class='model-content'>为确保您的预计收入能正常结算，请先添加身份证信息！</text>
+            <view class='model-btn' bindtap='gotoAuthBtnClick'>
+                <text class='model-btn-title'>立即认证</text>
+            </view>
+
+        </view>
+    </view>
+
+    <view class="popular-btn" bindtap="turnPopular">
+        <text>热门分享</text>
+        <view class="popular-arrow"></view>
+    </view>
+
+</view>

@@ -1,0 +1,135 @@
+view {
+    box-sizing: border-box;
+}
+image {
+    box-sizing: border-box;
+}
+text {
+    box-sizing: border-box;
+}
+
+.vip-result {
+    min-height: 100vh;
+    position: relative;
+}
+.vip-result .vip-result-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vip-result .success-bg {
+    width: 400rpx;
+    height: 394rpx;
+}
+.vip-result .vip-result-content {
+    margin-top: -150rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    color: #966C50
+}
+.vip-result .vip-result-content1 {
+    margin-top: 45rpx;
+    font-size: 40rpx;
+    font-weight: bold;
+}
+.vip-result .vip-result-content2 {
+    margin-top: 15rpx;
+    font-size: 26rpx;
+}
+.vip-result .vip-result-content3 {
+    margin-top: 90rpx;
+    height: 88rpx;
+    width: 530rpx;
+    border-radius: 44rpx;
+    background: linear-gradient(to right, #D09B5A, #EECFB1);
+    text-align: center;
+    line-height: 88rpx;
+    color: #FFFFFF;
+    font-size: 34rpx;
+}
+.vip-result .vip-result-content4 {
+    margin-top: 50rpx;
+    height: 88rpx;
+    width: 530rpx;
+    border: 1px solid #AA9179;
+    border-radius: 44rpx;
+    text-align: center;
+    line-height: 88rpx;
+    font-size: 34rpx;
+}
+.vip-result .vip-result-content5 {
+    margin-top: 10rpx;
+    font-size: 26rpx;
+    font-weight: bold;
+}
+/** 弹窗 **/
+.modal-popup {
+    position: fixed;
+    z-index: 12;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20rpx;
+    background-color: #ffffff;
+}
+.modal-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn1, .btn2 {
+    width: 270rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.vip-result .bitrh-modal-popup {
+    width: 540rpx;
+    height: 288rpx;
+}
+.vip-result .popup-content {
+    height: 200rpx;
+    padding: 38rpx 46rpx 0;
+}
+.vip-result .popup-content .popup-content-text1 {
+    text-align: center;
+    font-size: 34rpx;
+    font-weight: bold;
+    color: #353535;
+
+}
+.vip-result .popup-content .popup-content-text2 {
+    margin-top: 6rpx;
+    text-align: center;
+    font-size: 28rpx;
+    color: #353535;
+}
+.bitrh-modal-popup .pop-btn1, .bitrh-modal-popup .pop-btn2 {
+    height: 88rpx;
+    width: 270rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 34rpx;
+    font-weight: bold;
+    color: #BC8F57;
+}
+.vip-result  .birthdate-sure-btn {
+    margin: 0 50rpx;
+}
+.vip-result .birthdate-sure-btn view {
+    width: 530rpx;
+    height: 88rpx;
+    border-radius: 44rpx;
+    background: linear-gradient(to right, #D09B5A, #EECFB1);
+    line-height: 88rpx;
+    text-align: center;
+    font-size: 36rpx;
+    color: #473728;
+}

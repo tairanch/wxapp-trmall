@@ -1,0 +1,167 @@
+/* pages/shopCart/components/cartStore/CartStore.wxss */
+.cart-store{
+  color: #353535;
+  margin-bottom: 10px;
+  background: #fff;
+  box-sizing: border-box;
+}
+/* header */
+.cart-store .header-wrap {
+  height:40px;
+  background: #fff;
+}
+.cart-store .header-wrap .header{
+  height: 40px;
+  width: 100%;
+  position: relative;
+  top: 0;
+  background: #fff;
+}
+.header-wrap .header .store-header{
+  height: 40px;
+  border-bottom: 1px solid #f4f4f4;
+  line-height: 39px;
+  font-size: 13px;
+  display: flex;
+  text-align: center;
+  box-sizing: border-box;
+}
+.header-wrap .header .store-header .checkbox {
+    width: 45px;
+}
+.header-wrap .header .store-header .store-name {
+    display: flex;
+    flex: 1;
+	overflow:hidden;
+	text-align:left;
+	height: 43px;
+	line-height:43px;
+	word-break: break-all;
+	align-items: center;
+}
+
+
+.header-wrap .header .store-name-text {
+    flex-grow: 0;
+    flex-shrink: 1;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+	line-height: 43px;
+	height: 43px;
+}
+
+.header-wrap .header .store-name-text .image-biz {
+  vertical-align: -4px;
+  width: 15px;
+  height: 17px;
+}
+.header-wrap .header .store-name-text .image-default {
+  vertical-align: -3px;
+  width: 16px;
+  height: 15px;
+}
+.header-wrap .header .store-name-text .image-good {
+  vertical-align: -4px;
+  width: 17px;
+  height: 17px;
+}
+.header-wrap .header .store-name-text .image-self {
+  vertical-align: -4px;
+  width: 20px;
+  height: 20px;
+}
+.header-wrap .header .store-name-text .image-biz {
+  vertical-align: -4px;
+  width: 15px;
+  height: 17px;
+}
+.header-wrap .header .store-header .open-icon{
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+.header-wrap .header .store-header .long .open-icon {
+    margin-right: 0px;
+}
+.header-wrap .header .open-icon .arrow-right-icon{
+  margin-left:8px;
+	vertical-align:-1px;
+  display:inline-block;
+	width:7px;
+	height:12px;
+}
+
+/** vip-logo **/
+.store-name .vip-logo-box {
+    position: relative;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: center;
+	margin-left: 20rpx;
+	height: 43px;
+	width: 78px;
+	position: relative;
+}
+.store-name.long .vip-logo-box {
+    width: 88px;
+}
+
+.store-name .vip-logo-box .vip-logo {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 38px;
+	height: 16px;
+}
+.store-name .vip-logo-box .vip-text-bg {
+    box-sizing: border-box;
+    position: relative;
+    height: 16px;
+    width: 40px;
+    background: linear-gradient(to right, #FFEEE2, #F7E5C5);
+    border-top-right-radius: 16rpx;
+    border-bottom-right-radius: 16rpx;
+}
+.store-name.long .vip-logo-box .vip-text-bg {
+    box-sizing: border-box;
+    width: 50px;
+}
+.store-name .vip-logo-box .vip-text{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    box-sizing: border-box;
+    position: absolute;
+	font-size: 12px;
+	height: 20px;
+	line-height: 20px;
+	color: #513B26;
+	transform: scale(0.83) translateY(-60%);
+}
+
+
+.header-wrap .header .store-header .store-edit {
+  padding-right:5px;
+}
+.header-wrap .header .store-edit .text {
+	width: 40px;
+	height: 16px;
+	line-height: 18px;
+	vertical-align: middle;
+}
+.header-wrap .header .store-edit .one {
+  padding: 5px;
+  color:#ff5555;  
+}
+.header-wrap .header .store-edit .two {
+  margin: 5px;
+  padding-left: 5px;
+  border-left: 1px solid #d9d9d9;
+}
+
+/* store-body */
+.cart-store .store-body {
+    padding-bottom: 1px;
+}

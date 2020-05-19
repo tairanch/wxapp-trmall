@@ -1,0 +1,35 @@
+<!--pages/vipResult/vipResult.wxml-->
+<view class="vip-result">
+    <!--泰然城公众号-->
+    <official-account></official-account>
+    <view class="vip-result-bg">
+        <image src="/image/vipPage/vip-success.png" class="success-bg"></image>
+    </view>
+    <view class="vip-result-content">
+        <view class="vip-result-content5">支付成功</view>
+        <view class="vip-result-content1">恭喜您成为泰然城泰享会员</view>
+        <view class="vip-result-content2">建议您关注上面的公众号，以便获取最新的精彩活动!</view>
+        <view class="vip-result-content3" bindtap="turnHome">去首页</view>
+        <view class="vip-result-content4" bindtap="turnVipPage">我的权益</view>
+    </view>
+
+    <mask-popup wx:if="{{showPopup || pickerShow}}"></mask-popup>
+    <!--生日选择弹窗-->
+    <birthdate-picker wx:if="{{pickerShow}}" bindbirthTap="birthSure"></birthdate-picker>
+    <!--生日确认弹窗-->
+    <view class="modal-popup bitrh-modal-popup" wx:if="{{showPopup}}">
+        <view class="popup-content">
+            <view class="popup-content-text1">你的生日信息是否已确认?</view>
+            <view class="popup-content-text2">泰然城将以此日期为您发放生日福利</view>
+        </view>
+        <view class="modal-btns">
+            <view class="pop-btn1" bindtap="sureBtn">
+                <text>确认</text>
+            </view>
+
+            <view class="pop-btn2" bindtap="cancelBtn">
+                <text>取消</text>
+            </view>
+        </view>
+    </view>
+</view>

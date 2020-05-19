@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "search-component": "../component/searchCom/searchCom",
+    "banner-component":"../component/bannerCom/bannerCom",
+    "advertising-component": "../component/advertisingCom/advertisingCom",
+    "group-component": "../component/groupCom/groupCom",
+    "two-lines-component": "../component/twoLinesCom/twoLinesCom",
+    "three-lines-component": "../component/threeLinesCom/threeLinesCom",
+    "loading": "../component/loading/loading",
+    "navigator-bar": "../component/navigator/navigator"
+  },
+  "enablePullDownRefresh": true
+}

@@ -1,0 +1,370 @@
+.mine_page {
+  background: #f4f4f4;
+  height: 100vh;
+}
+
+/** 会员信息 **/
+.mine_page .vip-info-box {
+    box-sizing: border-box;
+    padding: 0 30rpx;
+    padding-top: 20rpx;
+    background-color: #ffffff;
+}
+.mine_page .vip-info {
+    box-sizing: border-box;
+    width: 690rpx;
+    height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url(https://image.tairanmall.com/b652f8c4105a6f1279ba365028bcab615d64efc2ece4b) no-repeat;
+    background-size: 690rpx 100rpx;
+    padding-left: 232rpx;
+    padding-right: 48rpx;
+}
+.mine_page .vip-info .vip-info-text1 {
+    position: relative;
+    color: #353535;
+    font-size: 26rpx;
+    padding-left: 16rpx;
+    line-height: 28rpx;
+}
+.mine_page .vip-info .vip-info-text1:before {
+    position: absolute;
+    left: 0rpx;
+    content: '';
+    display: block;
+    width: 1px;
+    height: 28rpx;
+    background-color: #8E6143;
+}
+
+
+.mine_page .vip-info .vip-info-text2 {
+    color: #F7DBBD;
+    background-color: #353535;
+    font-size: 24rpx;
+    width: 120rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    text-align: center;
+    border-radius: 20rpx;
+}
+
+.head_back {
+  width: 100%;
+  height: 230rpx;
+}
+
+.header {
+  position: relative;
+  padding: 10rpx 30rpx 0 30rpx;
+  height: 230rpx;
+  background: #fff;
+}
+
+.headPhoto_body {
+  box-sizing: border-box;
+  width: 120rpx;
+  height: 120rpx;
+  position: absolute;
+  top: 24%;
+  left: 9.3%;
+}
+
+.headPhoto {
+  box-sizing: border-box;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  border: 2rpx solid white;
+}
+.nick-name-bgview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 32%;
+  left: 30%;
+  height: 120rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.head-info {
+    position: absolute;
+    left: 28%;
+    top: 24%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 120rpx;
+}
+
+.name, .user-world {
+  font-size: 40rpx;
+  font-weight: 600;
+  color: #fff;
+  display: -webkit-box;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  width: 450rpx;
+}
+
+/** 会员标记 **/
+.vip-tag {
+    box-sizing: border-box;
+    width: 110rpx;
+    height: 34rpx;
+}
+
+.vip-tag-common {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    color: #FFFFFF;
+}
+
+.vip-tag-common text {
+    box-sizing: border-box;
+    font-size: 20rpx;
+}
+
+.vip-tag-common:after {
+    box-sizing: border-box;
+    content:'';
+    position:absolute;
+    border:1px solid #FFFFFF;
+    border-radius: 4px;
+    top:-50%;
+    right:-50%;
+    bottom:-50%;
+    left:-50%;
+    transform:scale(0.5);
+}
+
+
+.user-world {
+  font-size: 20rpx;
+}
+
+.message {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: 28rpx;
+  top: 15rpx;
+}
+
+.message image {
+  width: 23px;
+  height: 22px;
+}
+
+.message text {
+  font-size: 11px;
+  color: #fff;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.message_mount {
+  position: absolute;
+  top: 6rpx;
+  right: 20rpx;
+  font-size: 11px;
+  border-radius: 8px;
+  width: 16px;
+  height: 16px;
+  background: red;
+  color: #fff;
+  text-align: center;
+}
+
+.body {
+  background: #fff;
+}
+
+.order {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.order_item, .order_item_small {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 45rpx 0 45rpx 0;
+  color: #353535;
+  font-size: 30rpx;
+}
+
+.order_item_small {
+  font-size: 26rpx;
+  color: #666;
+}
+
+.arrow {
+  width: 14rpx;
+  height: 24rpx;
+  margin-left: 10px;
+}
+
+.lock {
+  width: 20px;
+  height: 22px;
+  margin-left: 23px;
+  margin-right: 12px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.line {
+  height: 1px;
+  background: #f4f4f4;
+}
+
+.orderType {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.orderType_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  font-size: 24rpx;
+  color: #666;
+  position: relative;
+}
+
+.orderType_item image {
+  width: 40rpx;
+  height: 36rpx;
+  margin-top: 20rpx;
+}
+
+.orderType_name {
+  margin-top: 25rpx;
+  margin-bottom: 40rpx;
+}
+
+.mount {
+  position: absolute;
+  right: 32rpx;
+  top: -6rpx;
+  font-size: 20rpx;
+  width: 36rpx;
+  height: 25rpx;
+  border-radius: 25rpx;
+  border: 2rpx solid #e60a30;
+  color: #e60a30;
+  text-align: center;
+  line-height: 25rpx;
+  margin-top: 6px;
+  font-weight: 600;
+  background: #fff;
+}
+
+.space {
+  width: 100%;
+  height: 20rpx;
+  background: #f4f4f4;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0 15px;
+}
+
+.list_left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px 0;
+  color: #3b3b3b;
+  font-size: 14px;
+}
+
+.list_left  image {
+  width: 18px;
+  height: 18px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.list_right {
+  font-size: 11.25pt;
+  color: #666;
+  display: flex;
+  align-items: center;
+}
+
+.contact {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+/*去掉按钮边框*/
+
+button[class="contact"]::after {
+  border: 0;
+}
+
+
+.verify-bg-view {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rpx;
+  height: 30rpx;
+  width: 120rpx;
+  padding: 6rpx 12rpx 8rpx 12rpx;
+  border-radius: 30rpx;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.verify-icon {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+/*已实名*/
+.verify-btn-title-ok {
+  margin-left: 14rpx;
+  font-size: 22rpx;
+  color: #ffcf7f;
+}
+
+/*未实名*/
+.verify-btn-title-no {
+  margin-left: 16rpx;
+  font-size: 22rpx;
+  color: #c9c9c9;
+}

@@ -1,0 +1,10 @@
+var tools = {
+    //电话中间**
+    handleId: function (id="") {
+        return id.length >= 11 ? id.slice(0, 3) + "****" + id.substring(id.length - 4, 11) : id
+    }
+}
+
+module.exports = {
+    handleId: tools.handleId
+}

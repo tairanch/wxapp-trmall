@@ -1,0 +1,16 @@
+<cover-view class="tab-bar">
+    <cover-view class="tab-bar-border"></cover-view>
+    <cover-view
+            wx:for="{{list}}"
+            wx:key="index"
+            class="tab-bar-item"
+            data-path="{{item.pagePath}}"
+            data-linkval="{{item.link_val}}"
+            data-linktype="{{item.link_type}}"
+            data-tabindex="{{index}}"
+            bindtap="switchTab"
+    >
+        <cover-image src="{{selected === index ? item.selected_icon : item.icon}}"></cover-image>
+        <cover-view style="color: {{selected === index ? item.selected_text_color : item.text_color}}">{{item.title}}</cover-view>
+    </cover-view>
+</cover-view>
